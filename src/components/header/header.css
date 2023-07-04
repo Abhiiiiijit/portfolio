@@ -1,54 +1,108 @@
+/* p{
+  overflow: hidden;
+  position: relative;
+  color: white;
+  font-size: 20px;
+}
+p::after{
+  content: "Designer";
+  display: inline-block; 
+  animation: animation 1.5s steps(9) infinite;
+  width: 0ch;
+  color: lightgoldenrodyellow;
+}
+
+p::before{
+  display: inline-block;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  animation: blinking .4s linear alternate infinite;
+}
+
+@keyframes animation{
+  25%{
+    content: "Developer";
+    width: 8.5ch;
+  }
+  40%{
+    width: 0ch;
+  }
+  75%{
+    content: "Designer";
+    width: 7.5ch;
+  }
+  90%{
+    width: 0ch;
+  }
+}
+@keyframes blinking{
+  100%{
+    opacity: 0;
+  }
+} */
+
 header {
-    height: 100vh;
-    padding-top: 7rem;
-    overflow: hidden;
-  }
-  
-  .header_container {
-    text-align: center;
-    height: 100%;
-    position: relative;
-  }
-  
-  .cta {
-    margin-top: 2.5rem;
-    display: flex;
-    gap: 1.2rem;
-    justify-content: center;
-  }
-  
-  .header_socials {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-    position: absolute;
-    left: 0;
-    bottom: 3rem;
-  }
-  
-  .me {
-    background: linear-gradient(var(--color-primary),transparent);
-    width: 22rem;
-    height: 30rem;
-    position: absolute;
-    left: calc(50% - 11rem);
-    margin-top: 4rem;
-    border-radius: 12rem 12rem 0 0;
-    overflow: hidden;
-    padding: 5rem 1.5rem 1.5rem 1.5rem;
-  }
-  
-  .scroll_down {
-    position: absolute;
-    right: -2.3rem;
-    bottom: 5rem;
-    transform: rotate(90deg);
-    font-weight: 200;
-    font-size: 0.9rem;
-  }
-  
-  .cartoon {
+  height: 150vh;
+  padding-top: 7rem;
+  overflow: hidden;
+}
+
+.header_container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.header_socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 0;
+  bottom: 3rem;
+}
+
+.header_socials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+
+.me {
+  background: linear-gradient(var(--color-primary),transparent);
+  width: 22rem;
+  height: 30rem;
+  position: absolute;
+  left: calc(50% - 11rem);
+  margin-top: 4rem;
+  border-radius: 12rem 12rem 0 0;
+  overflow: hidden;
+  padding: 5rem 1.5rem 1.5rem 1.5rem;
+  background-size: cover;
+}
+.scroll_down {
+  position: absolute;
+  right: -2.3rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  font-weight: 200;
+  font-size: 0.9rem;
+}
+
+/* .cartoon {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -69,9 +123,9 @@ header {
   
   .r {
     border-radius: 100%;
-  }
-  
-  .hb::before
+  } */
+
+/* .hb::before
    {
     content: "";
     display: block;
@@ -101,20 +155,22 @@ header {
     left: 10%;
     box-shadow: 0.5vmin 0, 2vmin -0.5vmin #6c572c, 2vmin -0.5vmin 0 0.5vmin;
     clip-path: polygon(0% 49%, 150% 48%, 150% 100%, 0% 100%);
+  } */
+
+
+@media screen and (max-width: 1024px) {
+  header {
+    height: 70vh;
   }
-  
-  
-  @media screen and (max-width: 1024px){
-    header {
-      height: 70vh;
-    }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    height: 100vh;
   }
-  
-  @media screen and (max-width: 600px){
-    header {
-      height: 100vh;
-    }
-    .header_socials, .scroll_down {
-      display: none;
-    }
+
+  .header_socials,
+  .scroll_down {
+    display: none;
   }
+}

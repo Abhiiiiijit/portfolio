@@ -2,8 +2,6 @@ import React from 'react'
 import './experience.css'
 export default function Experience() {
   return (
-    <div>
-      I am Experience
-    </div>
+    <section id="experience">I am Experience</section>
   )
 }
