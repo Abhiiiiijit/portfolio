@@ -26,13 +26,20 @@ DF4715
 F2D208
 234, 176, 55, 0.4
 EAE7D3 */
+/*
+1B9938
+*/
+/*
+1f1f38
+
+*/
 :root {
-  --color-bg:#1f1f38;
-  --color-bg-variant:#2c2c6c;
-  --color-primary:#4db5ff;
+  --color-bg:#fff;
+  --color-bg-variant:#2c6c3c;
+  --color-primary:#2DD68D;
   --color-primary-variant:rgba(77,181,255,0.4);
-  --color-white:#fff;
-  --color-light:rgba(255,255,255,0);
+  --color-white:#000;
+  --color-light:rgba(0,0,0,0);
 
   --transition:all 400ms ease;
   --container-width-lg:75%;
@@ -69,7 +76,7 @@ body{
   margin:0 auto;
 }
 
-h1,h2,h3,h4,h5{
+h1,h2,h3,h4,h5,h6{
   font-weight: 500;
 }
 

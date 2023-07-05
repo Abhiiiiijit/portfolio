@@ -3,7 +3,7 @@ import React from "react";
 export default function Doc() {
   return (
     <>
-      <div className="cta">
+      <div className="cta" style={{fontWeight:"bold"}}>
         {/* <button className="btn btn-outline-primary"> */}
             <a href="#" download className="btn" style={{textDecoration:"none" }} >Resume</a>
         {/* </button> */}
