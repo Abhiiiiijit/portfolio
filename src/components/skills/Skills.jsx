@@ -10,7 +10,7 @@ import react from "../../assets/logo/react.png";
 import mdb from "../../assets/logo/mongodb.png";
 export default function Skills() {
   return (
-    <section id="skill">
+    <section id="skill" style={{marginTop:"1%"}}>
       <p style={{ textAlign: "center" }}>Wanna Know My Skills</p>
       <h2>My Skills</h2>
       <div className="container experience_container">
