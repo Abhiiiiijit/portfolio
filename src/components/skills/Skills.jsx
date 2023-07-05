@@ -14,8 +14,11 @@ export default function Skills() {
       <p style={{ textAlign: "center" }}>Wanna Know My Skills</p>
       <h2>My Skills</h2>
       <div className="container experience_container">
+        
+        
+        {/* FrontEnd */}
         <div className="experience_frontend">
-          {/* FrontEnd */}
+          
           <h3>Frontend</h3>
           <div className="experience_content">
             <article className="experience_details">
@@ -48,8 +51,10 @@ export default function Skills() {
             </article>
           </div>
         </div>
+        
+        {/* Backend */}
         <div className="experience_backend">
-          {/* Backend */}
+          
           <h3>Backend</h3>
           <div className="experience_content">
             <article className="experience_details">
@@ -75,6 +80,9 @@ export default function Skills() {
             </article>
           </div>
         </div>
+
+
+        {/* Language */}
         <div className="experience_language">
           <h3>Language</h3>
           <div className="experience_content">
@@ -96,6 +104,41 @@ export default function Skills() {
               <img src={js} alt="" className="experience_details-icon" />
               <div>
                 <h4>JS</h4>
+                <h6 style={{ marginTop: "2%", color: "gray" }}>Intermidate</h6>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        {/* Tools or Software */}
+        <div className="experience_frontend">
+          <h3>Tools and Software</h3>
+          <div className="experience_content">
+            <article className="experience_details">
+              <img src={html} alt="" className="experience_details-icon" />
+              <div>
+                <h4>HTML</h4>
+                <h6 style={{ marginTop: "2%", color: "gray" }}>Experienced</h6>
+              </div>
+            </article>
+            <article className="experience_details">
+              <img src={css} alt="" className="experience_details-icon" />
+              <div>
+                <h4>CSS</h4>
+                <h6 style={{ marginTop: "2%", color: "gray" }}>Intermidate</h6>
+              </div>
+            </article>
+            <article className="experience_details">
+              <img src={js} alt="" className="experience_details-icon" />
+              <div>
+                <h4>JS</h4>
+                <h6 style={{ marginTop: "2%", color: "gray" }}>Intermidate</h6>
+              </div>
+            </article>
+            <article className="experience_details">
+              <img src={react} alt="" className="experience_details-icon" />
+              <div>
+                <h4>React</h4>
                 <h6 style={{ marginTop: "2%", color: "gray" }}>Intermidate</h6>
               </div>
             </article>
