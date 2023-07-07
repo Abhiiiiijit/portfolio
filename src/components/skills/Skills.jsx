@@ -8,17 +8,23 @@ import react from "../../assets/logo/react.png";
 
 // Backend
 import mdb from "../../assets/logo/mongodb.png";
+
+// language
+import java from "../../assets/logo/java.gif";
+import python from "../../assets/logo/python.gif";
+// Tools
+import vs from "../../assets/logo/vscode.png"
+import snapseed from "../../assets/logo/snapseed.png"
 export default function Skills() {
   return (
-    <section id="skill" style={{marginTop:"1%"}}>
+    <section id="skill" style={{ marginTop: "1%" }}>
       <p style={{ textAlign: "center" }}>Wanna Know My Skills</p>
-      <h2>My Skills</h2>
+      <h2 
+      // style={{ color: "black" }}
+      >My Skills</h2>
       <div className="container experience_container">
-        
-        
         {/* FrontEnd */}
         <div className="experience_frontend">
-          
           <h3>Frontend</h3>
           <div className="experience_content">
             <article className="experience_details">
@@ -51,10 +57,9 @@ export default function Skills() {
             </article>
           </div>
         </div>
-        
+
         {/* Backend */}
         <div className="experience_backend">
-          
           <h3>Backend</h3>
           <div className="experience_content">
             <article className="experience_details">
@@ -81,23 +86,22 @@ export default function Skills() {
           </div>
         </div>
 
-
         {/* Language */}
         <div className="experience_language">
           <h3>Language</h3>
           <div className="experience_content">
             <article className="experience_details">
-              <img src={html} alt="" className="experience_details-icon" />
+              <img src={java} alt="" className="experience_details-icon" />
               <div>
-                <h4>HTML</h4>
-                <h6 style={{ marginTop: "2%", color: "gray" }}>Experienced</h6>
+                <h4>JAVA</h4>
+                <h6 style={{ marginTop: "2%", color: "gray" }}>Intermidate</h6>
               </div>
             </article>
             <article className="experience_details">
-              <img src={css} alt="" className="experience_details-icon" />
+              <img src={python} alt="" className="experience_details-icon" />
               <div>
-                <h4>CSS</h4>
-                <h6 style={{ marginTop: "2%", color: "gray" }}>Intermidate</h6>
+                <h4>Python</h4>
+                <h6 style={{ marginTop: "2%", color: "gray" }}>Beginner</h6>
               </div>
             </article>
             <article className="experience_details">
@@ -115,17 +119,17 @@ export default function Skills() {
           <h3>Tools and Software</h3>
           <div className="experience_content">
             <article className="experience_details">
-              <img src={html} alt="" className="experience_details-icon" />
+              <img src={vs} alt="" className="experience_details-icon" />
               <div>
-                <h4>HTML</h4>
-                <h6 style={{ marginTop: "2%", color: "gray" }}>Experienced</h6>
+                <h4>VS Code</h4>
+                {/* <h6 style={{ marginTop: "2%", color: "gray" }}>Experienced</h6> */}
               </div>
             </article>
             <article className="experience_details">
-              <img src={css} alt="" className="experience_details-icon" />
+              <img src={snapseed} alt="" className="experience_details-icon" />
               <div>
-                <h4>CSS</h4>
-                <h6 style={{ marginTop: "2%", color: "gray" }}>Intermidate</h6>
+                <h4>Snapseed</h4>
+                {/* <h6 style={{ marginTop: "2%", color: "gray" }}>Intermidate</h6> */}
               </div>
             </article>
             <article className="experience_details">

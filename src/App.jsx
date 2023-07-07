@@ -22,6 +22,7 @@ function App() {
       <Project />
       {/* <Services /> */}
       {/* <Testimonial /> */}
+      {/* Error to be Correct in Testimonials */}
       <Contact />
       <Footer />
     </>
