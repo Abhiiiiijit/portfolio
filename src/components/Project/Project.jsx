@@ -47,7 +47,7 @@ const Projects = [
     image: img5,
     title: "Sales Forecasting",
     about_project:"Power BI for visualisation of Data of Sales Forecasting",
-    github: "https://github.com/Abhiiiiijit/TextUtils",
+    github: "https://github.com/Abhiiiiijit/Forecasting-Sales",
     demo: "#",
   }
 ];
