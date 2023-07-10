@@ -1,8 +1,10 @@
 import React from "react";
 import "./project.css";
 import img1 from "../../assets/project/Weather.png";
-import img3 from "../../assets/project/alcohol_IoT.png"
+import img2 from "../../assets/project/bringmemeal.png";
+import img3 from "../../assets/project/alcohol_IoT.png";
 import img4 from "../../assets/project/textutil.png";
+import img5 from "../../assets/project/powerbi.png";
 
 const Projects = [
   {
@@ -16,7 +18,7 @@ const Projects = [
   },
   {
     id: 2,
-    image: img1,
+    image: img2,
     title: "Bring Me Meal",
     about_project:
       "Food Delivery/Ordering App made using React.js, Bootstrap, Node.js, MongoDB, Express.js",
@@ -39,6 +41,14 @@ const Projects = [
     about_project:"Text Utility app i.e to perform various function like count, capitalize, to lowercase etc",
     github: "https://github.com/Abhiiiiijit/TextUtils",
     demo: "https://abhiiiiijit.github.io/TextUtils/",
+  },
+  {
+    id: 5,
+    image: img5,
+    title: "Sales Forecasting",
+    about_project:"Power BI for visualisation of Data of Sales Forecasting",
+    github: "https://github.com/Abhiiiiijit/TextUtils",
+    demo: "#",
   }
 ];
 const Project = () => {
