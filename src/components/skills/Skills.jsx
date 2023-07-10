@@ -8,7 +8,7 @@ import react from "../../assets/logo/react.png";
 
 // Backend
 import mdb from "../../assets/logo/mongodb.png";
-import sql from "../../assets/logo/sql.png"
+import sql from "../../assets/logo/sql.png";
 
 // language
 import java from "../../assets/logo/java.gif";
@@ -20,6 +20,7 @@ import vs from "../../assets/logo/vscode.png";
 import snapseed from "../../assets/logo/snapseed.png";
 import colab from "../../assets/logo/colab.png";
 import as from "../../assets/logo/as.png";
+import ol from "../../assets/logo/overleaf.png";
 export default function Skills() {
   return (
     <section id="skill" style={{ marginTop: "1%" }}>
@@ -79,7 +80,7 @@ export default function Skills() {
             <article className="experience_details">
               <img src={sql} alt="" className="experience_details-icon" />
               <div>
-               <h4>SQL</h4>
+                <h4>SQL</h4>
                 <h6 style={{ marginTop: "2%", color: "gray" }}>Intermidate</h6>
               </div>
             </article>
@@ -146,7 +147,14 @@ export default function Skills() {
                 <h6 style={{ marginTop: "2%", color: "gray" }}>Beginner</h6>
               </div>
             </article>
-                        <article className="experience_details">
+            <article className="experience_details">
+              <img src={ol} alt="" className="experience_details-icon" />
+              <div>
+                <h4>Overleaf</h4>
+                <h6 style={{ marginTop: "2%", color: "gray" }}>Beginner</h6>
+              </div>
+            </article>
+            <article className="experience_details">
               <img src={snapseed} alt="" className="experience_details-icon" />
               <div>
                 <h4>Snapseed</h4>
