@@ -1,6 +1,7 @@
 import React from "react";
 import "./project.css";
 import img1 from "../../assets/project/Weather.png";
+import img4 from "../../assets/project/textutil.png";
 const Projects = [
   {
     id: 1,
@@ -28,6 +29,14 @@ const Projects = [
       "IoT based group project made using Live hardware on Arduino UNO along with gas sensor, motors, LCD, WiFi Module etc",
     github: "https://github.com/Abhiiiiijit/Alcohol-Sensed-Engine-Lock-System",
     demo: "#",
+  },
+  {
+    id: 4,
+    image: img4,
+    title: "Textutils",
+    about_project:"Text Utility app i.e to perform various function like count, capitalize, to lowercase etc",
+    github: "https://github.com/Abhiiiiijit/TextUtils",
+    demo: "https://abhiiiiijit.github.io/TextUtils/",
   }
 ];
 const Project = () => {

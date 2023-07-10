@@ -8,20 +8,27 @@ import react from "../../assets/logo/react.png";
 
 // Backend
 import mdb from "../../assets/logo/mongodb.png";
+import sql from "../../assets/logo/sql.png"
 
 // language
 import java from "../../assets/logo/java.gif";
 import python from "../../assets/logo/python.gif";
+import latex from "../../assets/logo/latex.png";
+
 // Tools
-import vs from "../../assets/logo/vscode.png"
-import snapseed from "../../assets/logo/snapseed.png"
+import vs from "../../assets/logo/vscode.png";
+import snapseed from "../../assets/logo/snapseed.png";
+import colab from "../../assets/logo/colab.png";
+import as from "../../assets/logo/as.png";
 export default function Skills() {
   return (
     <section id="skill" style={{ marginTop: "1%" }}>
       <p style={{ textAlign: "center" }}>Wanna Know My Skills</p>
-      <h2 
+      <h2
       // style={{ color: "black" }}
-      >My Skills</h2>
+      >
+        My Skills
+      </h2>
       <div className="container experience_container">
         {/* FrontEnd */}
         <div className="experience_frontend">
@@ -70,9 +77,9 @@ export default function Skills() {
               </div>
             </article>
             <article className="experience_details">
-              <img src={css} alt="" className="experience_details-icon" />
+              <img src={sql} alt="" className="experience_details-icon" />
               <div>
-                <h4>CSS</h4>
+               <h4>SQL</h4>
                 <h6 style={{ marginTop: "2%", color: "gray" }}>Intermidate</h6>
               </div>
             </article>
@@ -105,10 +112,10 @@ export default function Skills() {
               </div>
             </article>
             <article className="experience_details">
-              <img src={js} alt="" className="experience_details-icon" />
+              <img src={latex} alt="" className="experience_details-icon" />
               <div>
-                <h4>JS</h4>
-                <h6 style={{ marginTop: "2%", color: "gray" }}>Intermidate</h6>
+                <h4>LaTex</h4>
+                <h6 style={{ marginTop: "2%", color: "gray" }}>Beginner</h6>
               </div>
             </article>
           </div>
@@ -122,27 +129,27 @@ export default function Skills() {
               <img src={vs} alt="" className="experience_details-icon" />
               <div>
                 <h4>VS Code</h4>
-                {/* <h6 style={{ marginTop: "2%", color: "gray" }}>Experienced</h6> */}
+                <h6 style={{ marginTop: "2%", color: "gray" }}>Experienced</h6>
               </div>
             </article>
             <article className="experience_details">
-              <img src={snapseed} alt="" className="experience_details-icon" />
+              <img src={colab} alt="" className="experience_details-icon" />
               <div>
-                <h4>Snapseed</h4>
-                {/* <h6 style={{ marginTop: "2%", color: "gray" }}>Intermidate</h6> */}
-              </div>
-            </article>
-            <article className="experience_details">
-              <img src={js} alt="" className="experience_details-icon" />
-              <div>
-                <h4>JS</h4>
+                <h4>Google Colab</h4>
                 <h6 style={{ marginTop: "2%", color: "gray" }}>Intermidate</h6>
               </div>
             </article>
             <article className="experience_details">
-              <img src={react} alt="" className="experience_details-icon" />
+              <img src={as} alt="" className="experience_details-icon" />
               <div>
-                <h4>React</h4>
+                <h4>Android Studio</h4>
+                <h6 style={{ marginTop: "2%", color: "gray" }}>Beginner</h6>
+              </div>
+            </article>
+                        <article className="experience_details">
+              <img src={snapseed} alt="" className="experience_details-icon" />
+              <div>
+                <h4>Snapseed</h4>
                 <h6 style={{ marginTop: "2%", color: "gray" }}>Intermidate</h6>
               </div>
             </article>
