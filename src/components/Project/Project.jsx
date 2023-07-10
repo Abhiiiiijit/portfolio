@@ -1,7 +1,9 @@
 import React from "react";
 import "./project.css";
 import img1 from "../../assets/project/Weather.png";
+import img3 from "../../assets/project/alcohol_IoT.png"
 import img4 from "../../assets/project/textutil.png";
+
 const Projects = [
   {
     id: 1,
@@ -23,7 +25,7 @@ const Projects = [
   },
   {
     id: 3,
-    image: img1,
+    image: img3,
     title: "Alcohol Sensed Engine Lock System",
     about_project:
       "IoT based group project made using Live hardware on Arduino UNO along with gas sensor, motors, LCD, WiFi Module etc",
