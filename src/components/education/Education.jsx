@@ -5,7 +5,7 @@ import {MdOutlineLocationCity} from "react-icons/md";
 import {GrScorecard} from "react-icons/gr";
 export default function Education() {
   return (
-    <section id="education" style={{marginTop:"1%"}}>
+    <section id="education" style={{marginTop:"5%"}}>
       <p style={{ textAlign: "center" }}>Education Timeline</p>
       <h2>Education</h2>
       <div className="container services_container">
@@ -24,11 +24,11 @@ export default function Education() {
               <GrScorecard className="service_list-icon" />
               <span>10th CBSE, 94.6%</span>
             </li>
-            <li>
+            {/* <li>
               <ImPointRight className="service_list-icon" />
 
               <span>About to be Written</span>
-            </li>
+            </li> */}
           </ul>
         </article>
         {/* Service 2 */}
@@ -46,10 +46,10 @@ export default function Education() {
               <GrScorecard className="service_list-icon" />
               <span>12th HSC, 88.9%</span>
             </li>
-            <li>
+            {/* <li>
               <ImPointRight className="service_list-icon" />
-              <span>About to be Written</span>
-            </li>
+              <span></span>
+            </li> */}
           </ul>
         </article>
         {/* Service_3 */}
@@ -67,10 +67,10 @@ export default function Education() {
               <GrScorecard className="service_list-icon" />
               <span>Currently 8.74 CGPA</span>
             </li>
-            <li>
+            {/* <li>
               <ImPointRight className="service_list-icon" />
               <span>About to be Written</span>
-            </li>
+            </li> */}
           </ul>
         </article>
       </div>

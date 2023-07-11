@@ -23,7 +23,7 @@ import as from "../../assets/logo/as.png";
 import ol from "../../assets/logo/overleaf.png";
 export default function Skills() {
   return (
-    <section id="skill" style={{ marginTop: "1%" }}>
+    <section id="skill" style={{ marginTop: "5%" }}>
       <p style={{ textAlign: "center" }}>Wanna Know My Skills</p>
       <h2
       // style={{ color: "black" }}

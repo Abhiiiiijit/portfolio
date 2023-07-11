@@ -5,6 +5,8 @@ import img2 from "../../assets/project/bringmemeal.png";
 import img3 from "../../assets/project/alcohol_IoT.png";
 import img4 from "../../assets/project/textutil.png";
 import img5 from "../../assets/project/powerbi.png";
+import img6 from "../../assets/project/car.jpg";
+import img7 from "../../assets/project/me.png"
 
 const Projects = [
   {
@@ -23,7 +25,7 @@ const Projects = [
     about_project:
       "Food Delivery/Ordering App made using React.js, Bootstrap, Node.js, MongoDB, Express.js",
     github: "https://github.com/Abhiiiiijit/Food-Delivery",
-    demo: "#",
+    demo: "https://github.com/Abhiiiiijit/Food-Delivery",
   },
   {
     id: 3,
@@ -32,7 +34,7 @@ const Projects = [
     about_project:
       "IoT based group project made using Live hardware on Arduino UNO along with gas sensor, motors, LCD, WiFi Module etc",
     github: "https://github.com/Abhiiiiijit/Alcohol-Sensed-Engine-Lock-System",
-    demo: "#",
+    demo: "https://github.com/Abhiiiiijit/Alcohol-Sensed-Engine-Lock-System",
   },
   {
     id: 4,
@@ -48,12 +50,28 @@ const Projects = [
     title: "Sales Forecasting",
     about_project:"Power BI for visualisation of Data of Sales Forecasting",
     github: "https://github.com/Abhiiiiijit/Forecasting-Sales",
-    demo: "#",
+    demo: "https://github.com/Abhiiiiijit/Forecasting-Sales",
+  },
+  {
+    id: 6,
+    image: img6,
+    title: "Anti Theft Ecommerce Delivery Vehicle",
+    about_project:"The robot is designed with integration of Arduino UNO and Arduino Mega board to ensure the complete robot working. The robot is controlled by a 4 wheel drive and remotely controlled via a RF remote.",
+    github: "https://github.com/Abhiiiiijit/Forecasting-Sales",
+    demo: "https://github.com/Abhiiiiijit/Forecasting-Sales",
+  },
+  {
+    id: 6,
+    image: img7,
+    title: "For More Projects",
+    about_project:"",
+    github: "https://github.com/Abhiiiiijit",
+    demo: "https://github.com/Abhiiiiijit",
   }
 ];
 const Project = () => {
   return (
-    <section id="project">
+    <section id="project" style={{marginTop:"5%"}}>
       <p style={{ textAlign: "center" }}>Personal and Courses Works</p>
       <h2>Projects</h2>
       <div className="container project_container">
@@ -67,7 +85,7 @@ const Project = () => {
               <p style={{ marginTop: "1%", marginBottom: "3%" }}>
                 {about_project}
               </p>
-              <div className="project-item-cta">
+              <div className="project-item-cta" style={{display:"flex"}}>
                 <a
                   href={github}
                   className="btn"

@@ -52,4 +52,9 @@
       grid-template-columns: 1fr;
       gap: 1rem;
     }
+    .project-item-cta {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
   }
