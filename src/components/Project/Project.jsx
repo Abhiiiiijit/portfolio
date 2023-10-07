@@ -57,8 +57,8 @@ const Projects = [
     image: img6,
     title: "Anti Theft Ecommerce Delivery Vehicle",
     about_project:"The robot is designed with integration of Arduino UNO and Arduino Mega board to ensure the complete robot working. The robot is controlled by a 4 wheel drive and remotely controlled via a RF remote.",
-    github: "https://github.com/Abhiiiiijit/Forecasting-Sales",
-    demo: "https://github.com/Abhiiiiijit/Forecasting-Sales",
+    github: "https://github.com/Abhiiiiijit/IoT-based-Anti-Theft-Ecommerce-Vehicle",
+    demo: "https://github.com/Abhiiiiijit/IoT-based-Anti-Theft-Ecommerce-Vehicle",
   },
   {
     id: 6,

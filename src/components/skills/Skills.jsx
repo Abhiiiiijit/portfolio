@@ -5,6 +5,8 @@ import html from "../../assets/logo/html.png";
 import css from "../../assets/logo/css.png";
 import js from "../../assets/logo/javascript.gif";
 import react from "../../assets/logo/react.png";
+import bootstrap from "../../assets/logo/bootstrap.png";
+import mui from "../../assets/logo/materialUi.png";
 
 // Backend
 import mdb from "../../assets/logo/mongodb.png";
@@ -21,6 +23,11 @@ import snapseed from "../../assets/logo/snapseed.png";
 import colab from "../../assets/logo/colab.png";
 import as from "../../assets/logo/as.png";
 import ol from "../../assets/logo/overleaf.png";
+import canva from "../../assets/logo/canva.png";
+import figma from "../../assets/logo/figma.png";
+
+
+
 export default function Skills() {
   return (
     <section id="skill" style={{ marginTop: "5%" }}>
@@ -61,6 +68,20 @@ export default function Skills() {
               <div>
                 <h4>React</h4>
                 <h6 style={{ marginTop: "2%", color: "gray" }}>Intermidate</h6>
+              </div>
+            </article>
+            <article className="experience_details">
+              <img src={bootstrap} alt="" className="experience_details-icon" />
+              <div>
+                <h4>Bootstrap</h4>
+                <h6 style={{ marginTop: "2%", color: "gray" }}>Intermidate</h6>
+              </div>
+            </article>
+            <article className="experience_details">
+              <img src={mui} alt="" className="experience_details-icon" />
+              <div>
+                <h4>Material UI</h4>
+                <h6 style={{ marginTop: "2%", color: "gray" }}>Beginner</h6>
               </div>
             </article>
           </div>
@@ -159,6 +180,20 @@ export default function Skills() {
               <div>
                 <h4>Snapseed</h4>
                 <h6 style={{ marginTop: "2%", color: "gray" }}>Intermidate</h6>
+              </div>
+            </article>
+            <article className="experience_details">
+              <img src={canva} alt="" className="experience_details-icon" />
+              <div>
+                <h4>Canva</h4>
+                <h6 style={{ marginTop: "2%", color: "gray" }}>Intermidate</h6>
+              </div>
+            </article>
+            <article className="experience_details">
+              <img src={figma} alt="" className="experience_details-icon" />
+              <div>
+                <h4>Figma</h4>
+                <h6 style={{ marginTop: "2%", color: "gray" }}>Beginner</h6>
               </div>
             </article>
           </div>
