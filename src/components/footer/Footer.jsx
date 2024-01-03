@@ -20,7 +20,7 @@ export default function Footer() {
           <a href="#about">About</a>
         </li>
         <li>
-          <a href="#experience">Experience</a>
+          <a href="#services">Services</a>
         </li>
         <li>
           <a href="#skill">Skills</a>
