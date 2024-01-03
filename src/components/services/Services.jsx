@@ -1,74 +1,61 @@
 import React from "react";
 import "./services.css";
-import { ImPointRight } from "react-icons/im";
-export default function Services() {
-  return (
-    <section id="services">
-      <p style={{ textAlign: "center" }}>What I Offer</p>
-      <h2>My Services</h2>
-      <div className="container services_container">
-        {/* Service_1 */}
-        <article className="service">
-          <div className="service_head">
-            <h2>UI/UX</h2>
-          </div>
-          <ul className="service_list">
-            <li>
-              <ImPointRight className="service_list-icon" />
-              <span>Lorem ipsum dolor sit amet.</span>
-            </li>
-            <li>
-              <ImPointRight className="service_list-icon" />
-              <span>Lorem ipsum dolor sit amet.</span>
-            </li>
-            <li>
-              <ImPointRight className="service_list-icon" />  
+import img1 from "../../assets/work/kuhoo.png";
 
-              <span>Lorem ipsum dolor sit amet.</span>
-            </li>
-          </ul>
-        </article>
-        {/* Service 2 */}
-        <article className="service">
-          <div className="service_head">
-            <h2>Web Development</h2>
-          </div>
-          <ul className="service_list">
-            <li>
-              <ImPointRight className="service_list-icon" />
-              <span>Lorem ipsum dolor sit amet.</span>
-            </li>
-            <li>
-              <ImPointRight className="service_list-icon" />  
-              <span>Lorem ipsum dolor sit amet.</span>
-            </li>
-            <li>
-              <ImPointRight className="service_list-icon" />
-              <span>Lorem ipsum dolor sit amet.</span>
-            </li>
-          </ul>
-        </article>
-        {/* Service_3 */}
-        <article className="service">
-          <div className="service_head">
-            <h2>XYZ</h2>
-          </div>
-          <ul className="service_list">
-            <li>
-              <ImPointRight className="service_list-icon" />
-              <span>Lorem ipsum dolor sit amet.</span>
-            </li>
-            <li>
-              <ImPointRight className="service_list-icon" />
-              <span>Lorem ipsum dolor sit amet.</span>
-            </li>
-            <li>
-              <ImPointRight className="service_list-icon" />
-              <span>Lorem ipsum dolor sit amet.</span>
-            </li>
-          </ul>
-        </article>
+const Work = [
+  {
+    id: 1,
+    image: img1,
+    title: "SDE Intern",
+    about_project:
+      "Frontend Intern using Flutter",
+    location:"BKC, Mumbai, Maharastra, India",
+    github: "https://github.com/Abhiiiiijit/Weather",
+    demo: "https://seetheforecast.netlify.app/",
+  },
+];
+const Services = () => {
+  return (
+    <section id="services" style={{ marginTop: "5%" }}>
+      <p style={{ textAlign: "center" }}>Jobs and Internships</p>
+      <h2>Work</h2>
+      <div className="container project_container">
+        {Work.map(({ id, image, title, about_project, location,github, demo }) => {
+          return (
+            <article key={id} className="project_item">
+              <div className="project_item-image">
+                <img src={image} alt={title} />
+              </div>
+              <h3 style={{ textAlign: "center" }}>{title}</h3>
+              <p style={{ marginTop: "1%", marginBottom: "3%" }}>
+                {about_project}
+              </p>
+              <p style={{ marginTop: "1%", marginBottom: "3%" }}>
+                {location}
+              </p>
+              <div className="project-item-cta" style={{ display: "flex" }}>
+                <a
+                  href={github}
+                  className="btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Linkedin
+                </a>
+                <a
+                  href={demo}
+                  className="btn btn-primary"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Website
+                </a>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </section>
   );
-}
+};
+export default Services;

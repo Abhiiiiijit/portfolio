@@ -3,6 +3,7 @@ import "./navbar.css";
 import {FaBook} from "react-icons/fa";
 import {FcHome,FcBusinessContact} from "react-icons/fc";
 import {SiAboutdotme, SiCodeproject} from "react-icons/si"
+import { GiOfficeChair } from "react-icons/gi";
 
 import { useState } from "react";
 export default function Navbar() {
@@ -24,18 +25,26 @@ export default function Navbar() {
         <SiAboutdotme />
       </a>
       <a
+        href="#skill"
+        onClick={() => setActiveNav("#skills")}
+        className={activeNav === "#skills" ? "active" : ""}
+      >
+        <FaBook />
+      </a>
+      <a
         href="#project"
         onClick={() => setActiveNav("#project")}
         className={activeNav === "#project" ? "active" : ""}
       >
         <SiCodeproject />
       </a>
+
       <a
-        href="#skill"
-        onClick={() => setActiveNav("#skills")}
-        className={activeNav === "#skills" ? "active" : ""}
+        href="#services"
+        onClick={() => setActiveNav("#services")}
+        className={activeNav === "#services" ? "active" : ""}
       >
-        <FaBook />
+        <GiOfficeChair />
       </a>
       <a
         href="#contact"

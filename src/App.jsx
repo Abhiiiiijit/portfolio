@@ -20,7 +20,7 @@ function App() {
       <Education/>
       <Skill/>
       <Project />
-      {/* <Services /> */}
+      <Services />
       {/* <Testimonial /> */}
       {/* Error to be Correct in Testimonials */}
       <Contact />
