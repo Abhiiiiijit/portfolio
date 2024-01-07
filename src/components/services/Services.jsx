@@ -10,8 +10,8 @@ const Work = [
     about_project:
       "Frontend Intern using Flutter",
     location:"BKC, Mumbai, Maharastra, India",
-    github: "https://github.com/Abhiiiiijit/Weather",
-    demo: "https://seetheforecast.netlify.app/",
+    linkedin: "https://www.linkedin.com/company/kuhoo-edufintech/mycompany/",
+    webstite: "https://www.kuhoo.com/",
   },
 ];
 const Services = () => {
@@ -20,7 +20,7 @@ const Services = () => {
       <p style={{ textAlign: "center" }}>Jobs and Internships</p>
       <h2>Work</h2>
       <div className="container project_container">
-        {Work.map(({ id, image, title, about_project, location,github, demo }) => {
+        {Work.map(({ id, image, title, about_project, location,linkedin, webstite }) => {
           return (
             <article key={id} className="project_item">
               <div className="project_item-image">
@@ -35,7 +35,7 @@ const Services = () => {
               </p>
               <div className="project-item-cta" style={{ display: "flex" }}>
                 <a
-                  href={github}
+                  href={linkedin}
                   className="btn"
                   target="_blank"
                   rel="noreferrer"
@@ -43,7 +43,7 @@ const Services = () => {
                   Linkedin
                 </a>
                 <a
-                  href={demo}
+                  href={webstite}
                   className="btn btn-primary"
                   target="_blank"
                   rel="noreferrer"
