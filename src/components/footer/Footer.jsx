@@ -1,11 +1,6 @@
 import React from "react";
 import "./footer.css";
-import {
-  FaLinkedin,
-  FaGithub,
-  FaTwitter,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer>
@@ -20,7 +15,7 @@ export default function Footer() {
           <a href="#about">About</a>
         </li>
         <li>
-          <a href="#services">Services</a>
+          <a href="#services">Work</a>
         </li>
         <li>
           <a href="#skill">Skills</a>
@@ -63,7 +58,7 @@ export default function Footer() {
         </a>
       </div>
       <div className="footer_copyright">
-        <p>&copy; abhiiiiiiijeet  All rights reserved</p>
+        <p>&copy; abhiiiiiiijeet All rights reserved</p>
       </div>
     </footer>
   );

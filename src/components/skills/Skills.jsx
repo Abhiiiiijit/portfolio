@@ -7,6 +7,7 @@ import js from "../../assets/logo/javascript.gif";
 import react from "../../assets/logo/react.png";
 import bootstrap from "../../assets/logo/bootstrap.png";
 import mui from "../../assets/logo/materialUi.png";
+import flutter from "../../assets/logo/flutter.png";
 
 // Backend
 import mdb from "../../assets/logo/mongodb.png";
@@ -16,6 +17,7 @@ import sql from "../../assets/logo/sql.png";
 import java from "../../assets/logo/java.gif";
 import python from "../../assets/logo/python.gif";
 import latex from "../../assets/logo/latex.png";
+import dart from "../../assets/logo/dart.png";
 
 // Tools
 import vs from "../../assets/logo/vscode.png";
@@ -25,8 +27,6 @@ import as from "../../assets/logo/as.png";
 import ol from "../../assets/logo/overleaf.png";
 import canva from "../../assets/logo/canva.png";
 import figma from "../../assets/logo/figma.png";
-
-
 
 export default function Skills() {
   return (
@@ -84,6 +84,13 @@ export default function Skills() {
                 <h6 style={{ marginTop: "2%", color: "gray" }}>Beginner</h6>
               </div>
             </article>
+            <article className="experience_details">
+              <img src={flutter} alt="" className="experience_details-icon" />
+              <div>
+                <h4>Flutter (Dart)</h4>
+                <h6 style={{ marginTop: "2%", color: "gray" }}>Beginner</h6>
+              </div>
+            </article>
           </div>
         </div>
 
@@ -137,6 +144,13 @@ export default function Skills() {
               <img src={latex} alt="" className="experience_details-icon" />
               <div>
                 <h4>LaTex</h4>
+                <h6 style={{ marginTop: "2%", color: "gray" }}>Beginner</h6>
+              </div>
+            </article>
+            <article className="experience_details">
+              <img src={dart} alt="" className="experience_details-icon" />
+              <div>
+                <h4>Dart (Flutter)</h4>
                 <h6 style={{ marginTop: "2%", color: "gray" }}>Beginner</h6>
               </div>
             </article>
