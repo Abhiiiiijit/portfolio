@@ -2,10 +2,8 @@ import React from "react";
 import "./about.css";
 import ME from "../../assets/Me/me_8.jpg";
 import { MdWorkHistory } from "react-icons/md";
-// import { SiCodeproject } from "react-icons/si";
 import {FaCode} from "react-icons/fa";
 import { FcStackOfPhotos } from "react-icons/fc";
-// import project from "../../assets/logo/project.png"
 export default function About() {
   return (
     <>
