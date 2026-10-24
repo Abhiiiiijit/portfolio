@@ -99,10 +99,10 @@ function App() {
             <span>Statement of account</span>
             <span>Holder: Abhijit Bose Das</span>
             <span>Branch: Mumbai</span>
-            <span className="accent">● Open to Flutter roles</span>
+            <span className="accent">● Open to new roles</span>
           </div>
           <div className="hero-row">
-            <h1>Flutter engineer.<br />Student-loan fintech.<br /><span className="dim">2.5 years, compounding.</span></h1>
+            <h1>Software engineer.<br />Student-loan fintech.<br /><span className="dim">2.5 years, compounding.</span></h1>
             <img className="portrait" src={portrait} alt="Abhijit Bose Das" />
           </div>
           <p className="lede">
