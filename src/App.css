@@ -60,9 +60,14 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   flex: 999 1 560px; margin: 0;
   font-size: clamp(44px, 6.4vw, 92px); line-height: 0.98; font-weight: 600; letter-spacing: -0.035em;
 }
+/* Edges fade into the page background so the photo has no visible frame. */
 .portrait {
-  flex: 0 0 auto; width: 200px; height: 240px; object-fit: cover;
-  filter: grayscale(1) contrast(1.05); border: 1px solid var(--line);
+  flex: 0 0 auto; width: 280px; height: 336px; object-fit: cover;
+  filter: grayscale(1) contrast(1.05) brightness(0.8);
+  -webkit-mask-image: linear-gradient(to right, transparent, rgba(0,0,0,.08) 10%, rgba(0,0,0,.4) 22%, #000 36%, #000 64%, rgba(0,0,0,.4) 78%, rgba(0,0,0,.08) 90%, transparent), linear-gradient(to bottom, transparent, rgba(0,0,0,.08) 8%, rgba(0,0,0,.4) 18%, #000 30%, #000 58%, rgba(0,0,0,.4) 76%, rgba(0,0,0,.08) 90%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent, rgba(0,0,0,.08) 10%, rgba(0,0,0,.4) 22%, #000 36%, #000 64%, rgba(0,0,0,.4) 78%, rgba(0,0,0,.08) 90%, transparent), linear-gradient(to bottom, transparent, rgba(0,0,0,.08) 8%, rgba(0,0,0,.4) 18%, #000 30%, #000 58%, rgba(0,0,0,.4) 76%, rgba(0,0,0,.08) 90%, transparent);
+  mask-composite: intersect;
 }
 .lede { max-width: 640px; margin: 36px 0 0; font-size: 19px; color: var(--body-ink); }
 .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
