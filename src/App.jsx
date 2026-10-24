@@ -278,11 +278,8 @@ function App() {
           <div className="contact-lines">
             <div className="cline"><span className="k">EMAIL</span><a href={`mailto:${EMAIL}`}>{EMAIL}</a></div>
             <div className="cline"><span className="k">LINKEDIN</span><a href={LINKEDIN} target="_blank" rel="noreferrer">in/abhijit-bose-das</a></div>
-            <div className="cline">
-              <span className="k">PHONE</span>
-              <a href={`tel:${PHONE}`}>{PHONE_LABEL}</a>
-              <a href={WHATSAPP} target="_blank" rel="noreferrer">WhatsApp ↗</a>
-            </div>
+            <div className="cline"><span className="k">PHONE</span><a href={`tel:${PHONE}`}>{PHONE_LABEL}</a></div>
+            <div className="cline"><span className="k">WHATSAPP</span><a href={WHATSAPP} target="_blank" rel="noreferrer">Message on WhatsApp ↗</a></div>
             <div className="cline"><span className="k">GITHUB</span><a href={GITHUB} target="_blank" rel="noreferrer">github.com/Abhiiiiijit</a></div>
           </div>
           <footer className="footer">
