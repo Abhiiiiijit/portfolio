@@ -144,7 +144,7 @@ function App() {
               </p>
               <div className="employer-links">
                 <a href="https://www.kuhoo.com/" target="_blank" rel="noreferrer">kuhoo.com ↗</a>
-                <a href="https://www.linkedin.com/company/kuhoo-edufintech/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+                <a href="https://www.linkedin.com/company/kuhoo-finance/posts/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
               </div>
             </div>
             <ol className="roles">
