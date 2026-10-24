@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import portrait from "./assets/portrait.jpg";
 
@@ -6,319 +5,287 @@ const EMAIL = "abhijeetbosedas8@gmail.com";
 const GITHUB = "https://github.com/Abhiiiiijit";
 const LINKEDIN = "https://linkedin.com/in/abhijitbosedas";
 
-const STATS = [
-  { value: "150K+", label: "Student App downloads" },
-  { value: "3", label: "Products shipped" },
-  { value: "80%", label: "Faster loan sanction" },
-  { value: "2.5+ yrs", label: "Flutter in fintech" },
+const BALANCES = [
+  { value: "150K+", label: "Student App downloads", accent: true },
+  { value: "−80%", label: "Loan sanction time" },
+  { value: "03", label: "Products shipped" },
+  { value: "8.72", label: "GPA, B.Tech CSE · VIT-AP" },
 ];
 
-const LIFECYCLE = [
+const ROLES = [
   {
-    stage: "Lead & onboarding",
-    items: [
-      ["Partner Portal", " for agents to submit loan leads"],
-      ["Partner onboarding", " automated for 100+ partners"],
-    ],
+    when: "MAY 2024 → NOW",
+    current: true,
+    title: "Software Development Engineer I",
+    text: "Student App, LOS Portal and Partner Portal across Android, iOS and Web. Security, DigiLocker/AA integrations and release automation.",
+    stack: "Flutter · Dart · BLoC · Clean Architecture · REST · GoRouter · Firebase · Fastlane · GitLab CI/CD",
   },
   {
-    stage: "KYC & documents",
-    items: [
-      ["In-app CKYC", " replacing manual calls"],
-      ["DigiLocker & Account Aggregator", " flows"],
-    ],
-  },
-  {
-    stage: "Credit & sanction",
-    items: [
-      ["Sanction workflow", " redesign, 80% faster"],
-      ["Multi-insurance", " selection in the loan flow"],
-    ],
-  },
-  {
-    stage: "Disbursement",
-    items: [["SOA, IC, NOC, RPS", " downloads in the LOS"]],
-  },
-  {
-    stage: "Repayment & servicing",
-    items: [
-      ["EMI repayment plans", " for customers"],
-      ["Self-serve documents", " and FCM push notifications"],
-    ],
+    when: "JAN → MAY 2024",
+    title: "SDE Intern",
+    note: "→ converted to full-time",
+    text: "Partner Onboarding portal for the LOS: responsive layouts for mobile, tablet and web with BLoC/Cubit, built test-first, plus code reviews and QA/UAT support.",
+    stack: "Flutter · Dart · BLoC · TDD · Unit & widget testing · Git",
   },
 ];
 
-const PRODUCTS = [
-  {
-    name: "Kuhoo Student App",
-    platform: "Android & iOS · 100K+ Play Store · 50K+ App Store",
-    items: [
-      { title: "Post-disbursement journey.", text: "Built self-serve SOA, IC, NOC and RPS downloads for borrowers.", metric: "−80%", unit: "manual effort" },
-      { title: "CKYC.", text: "Designed the in-app CKYC journey, replacing the credit team's manual calls and making applications fully compliant." },
-      { title: "Repayment plans.", text: "Added predefined EMI plans so repayment is simpler and more predictable." },
-      { title: "Push notifications.", text: "Took in-house notifications from requirement to production with FCM and native platform channels." },
-    ],
-  },
-  {
-    name: "Loan Origination System Portal",
-    platform: "Flutter Web",
-    items: [
-      { title: "Loan sanction.", text: "Redesigned the sanction workflow so the credit team sees every applicant detail in one place.", metric: "−80%", unit: "sanction time" },
-      { title: "Multi-insurance.", text: "Introduced multi-insurance selection into the loan flow.", metric: "−70%", unit: "manual effort" },
-      { title: "Document downloads.", text: "Shipped post-disbursement downloads for 4 document types, giving LOS users complete applicant records.", metric: "4", unit: "doc types" },
-    ],
-  },
-  {
-    name: "Partner Portal",
-    platform: "Flutter Web",
-    items: [
-      { title: "Lead onboarding.", text: "Launched the platform where agents and onboarded partners submit loan leads." },
-    ],
-  },
-  {
-    name: "Cross-platform work",
-    platform: "Web, Android & iOS",
-    items: [
-      { title: "Security.", text: "Implemented multi-factor authentication (OTP/TOTP), JWT-based sessions and data encryption, protecting sensitive applicant and loan data.", metric: "3", unit: "platforms" },
-      { title: "DigiLocker & Account Aggregator.", text: "Defined and integrated both flows for a document-free journey with minimal manual input.", metric: "2", unit: "flows" },
-      { title: "Stability.", text: "Diagnosed and fixed crashes through root cause analysis and Firebase Crashlytics." },
-      { title: "Release automation.", text: "Improved the CI/CD pipeline and automated Android and iOS releases with Fastlane and GitLab CI/CD." },
-    ],
-  },
+const STAGES = [
+  { name: "Lead & onboarding", text: "Partner Portal for agent leads. Onboarding automated for 100+ partners." },
+  { name: "KYC & documents", text: "In-app CKYC replacing manual calls. DigiLocker and Account Aggregator." },
+  { name: "Credit & sanction", text: "Sanction workflow redesign, 80% faster. Multi-insurance in the flow." },
+  { name: "Disbursement", text: "SOA, IC, NOC and RPS downloads in the LOS." },
+  { name: "Repayment", text: "EMI plans, self-serve documents and FCM push notifications." },
 ];
 
-const INTERN_ITEMS = [
-  { title: "Automated partner onboarding", text: " for 100+ partners.", metric: "−90%", unit: "manual work" },
-  { title: "Responsive layouts", text: " for mobile, tablet and web using BLoC/Cubit and REST APIs, built test-first with unit and widget tests, plus code reviews and QA/UAT support.", metric: "3", unit: "form factors" },
+const LEDGER = [
+  { product: "LOS Portal", title: "Loan sanction redesign.", text: "Credit team sees every applicant detail in one place.", effect: "−80% time", accent: true },
+  { product: "Student App", title: "Post-disbursement journey.", text: "Self-serve SOA, IC, NOC and RPS downloads for borrowers.", effect: "−80% effort", accent: true },
+  { product: "Partner Onboarding", title: "Automated onboarding", text: "for 100+ partners (internship).", effect: "−90% work", accent: true },
+  { product: "LOS Portal", title: "Multi-insurance selection", text: "introduced into the loan flow.", effect: "−70% effort", accent: true },
+  { product: "Student App", title: "In-app CKYC.", text: "Replaced the credit team's manual calls; applications fully compliant.", effect: "compliance" },
+  { product: "All platforms", title: "Security.", text: "MFA (OTP/TOTP), JWT sessions and data encryption for applicant and loan data.", effect: "3 platforms" },
+  { product: "All platforms", title: "DigiLocker & Account Aggregator", text: "for a document-free journey.", effect: "2 flows" },
+  { product: "Student App", title: "EMI repayment plans", text: "and in-house FCM push notifications via platform channels.", effect: "shipped" },
+  { product: "Release", title: "Fastlane + GitLab CI/CD", text: "automating Android and iOS releases; Crashlytics root-cause fixes.", effect: "automated" },
+  { product: "Partner Portal", title: "Lead onboarding platform", text: "where agents and partners submit loan leads.", effect: "launched" },
 ];
 
-const SKILLS = [
-  { group: "Flutter & Dart", core: true, items: ["BLoC / Cubit", "Clean Architecture", "Dio", "GoRouter", "GetIt", "Freezed", "Flutter Web", "Material 3", "Platform Channels", "FCM", "Deep Linking", "Offline-first", "Responsive UI"] },
-  { group: "Quality", items: ["Unit Testing", "Widget Testing", "TDD", "SOLID", "MVVM", "Crashlytics"] },
-  { group: "Release & DevOps", items: ["Fastlane", "Play Store", "App Store", "GitLab CI/CD", "Git", "Gradle"] },
-  { group: "Security & data", items: ["MFA", "JWT", "Encryption", "Secure Storage", "SQL", "Firestore", "Remote Config"] },
-  { group: "Process", items: ["Agile / Scrum", "Low-Level Design", "Design Reviews"] },
-  { group: "Also", items: ["Java", "React / Next"] },
-  { group: "Tools", items: ["Claude Code", "Cursor", "VS Code", "Android Studio", "Xcode", "DBeaver", "Jira", "Swagger", "Postman"] },
+const STACK = [
+  { group: "Flutter & Dart", core: true, items: "BLoC / Cubit · Clean Architecture · Dio · GoRouter · GetIt · Freezed · Flutter Web · Material 3 · Platform Channels · FCM · Deep Linking · Offline-first" },
+  { group: "Quality", items: "Unit & widget testing · TDD · SOLID · MVVM · Crashlytics" },
+  { group: "Release & DevOps", items: "Fastlane · Play Store · App Store · GitLab CI/CD · Git · Gradle" },
+  { group: "Security & data", items: "MFA · JWT · Encryption · Secure Storage · SQL · Firestore · Remote Config" },
+  { group: "Also", items: "Java · React / Next · Agile / Scrum · Low-level design" },
+  { group: "Tools", items: "Claude Code · Cursor · Android Studio · Xcode · Jira · Postman · Swagger" },
 ];
 
-const SDE_STACK = ["Flutter", "Dart", "BLoC", "Clean Architecture", "REST APIs", "GoRouter", "Firebase", "Fastlane", "GitLab CI/CD", "Claude Code"];
-const INTERN_STACK = ["Flutter", "Dart", "BLoC", "TDD", "Unit & Widget Testing", "Git"];
+const FUN_PROJECTS = [
+  { name: "Filmo Ki Duniya", text: "Movie discovery app — every kind of film in one place.", live: "https://filmokiduniya.vercel.app/", code: "https://github.com/Abhiiiiijit/movie_app" },
+  { name: "Bring Me Meal", text: "Food-ordering app on React, Node, Express and MongoDB.", code: "https://github.com/Abhiiiiijit/Food-Delivery" },
+  { name: "Alcohol-Sensed Engine Lock", text: "IoT group build on Arduino UNO with a gas sensor, motors, LCD and Wi-Fi.", code: "https://github.com/Abhiiiiijit/Alcohol-Sensed-Engine-Lock-System" },
+  { name: "Anti-Theft Delivery Vehicle", text: "4WD robot on Arduino UNO + Mega, driven by RF remote.", code: "https://github.com/Abhiiiiijit/IoT-based-Anti-Theft-Ecommerce-Vehicle" },
+  { name: "Sales Forecasting", text: "Power BI visualisation of sales forecast data.", code: "https://github.com/Abhiiiiijit/Forecasting-Sales" },
+];
 
-function Chips({ items }) {
-  return (
-    <div className="stack">
-      {items.map((s) => (
-        <span className="chip" key={s}>{s}</span>
-      ))}
-    </div>
-  );
-}
+const HOBBIES = ["Photography", "Travel", "Sports"];
 
-function Product({ name, platform, items }) {
-  return (
-    <div className="product">
-      <div className="product-head">
-        <h3>{name}</h3>
-        <span className="platform">{platform}</span>
-      </div>
-      <ul className="items">
-        {items.map((it) => (
-          <li key={it.title}>
-            <p><strong>{it.title}</strong> {it.text}</p>
-            {it.metric && (
-              <span className="metric">{it.metric}<small>{it.unit}</small></span>
-            )}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function CopyEmail() {
-  const [label, setLabel] = useState("Copy");
-  const copy = async () => {
-    try {
-      await navigator.clipboard.writeText(EMAIL);
-      setLabel("Copied");
-    } catch {
-      setLabel("Press Ctrl+C");
-    }
-    setTimeout(() => setLabel("Copy"), 1600);
-  };
-  return <button className="copy" type="button" onClick={copy}>{label}</button>;
-}
+const SCHOOLS = [
+  { name: "PACE Junior Science College", detail: "Borivali, Mumbai · 12th HSC", score: "88.9%" },
+  { name: "SSPM's SSRVM", detail: "Borivali, Mumbai · 10th CBSE", score: "94.6%" },
+];
 
 function App() {
   return (
-    <>
+    <div className="page">
       <nav className="nav" aria-label="Primary">
-        <div className="wrap">
-          <a className="brand" href="#top">abhijitbosedas<span>.</span>com</a>
-          <ul>
-            <li><a href="#lifecycle">Lifecycle</a></li>
-            <li><a href="#work">Work</a></li>
-            <li className="hide-sm"><a href="#skills">Skills</a></li>
-            <li className="hide-sm"><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+        <div className="wrap nav-inner">
+          <a className="brand" href="#top">ABD/<span>ledger</span></a>
+          <div className="nav-links">
+            <a href="#entries">01 Job</a>
+            <a href="#stack">02 Stack</a>
+            <a href="#side">03 Side work</a>
+            <a href="#personal">04 Off the clock</a>
+            <a href="#contact">05 Contact</a>
+          </div>
         </div>
       </nav>
 
-      <main id="top">
-        <header className="wrap hero">
-          <div className="hero-grid">
-            <div className="hero-text">
-              <div className="eyebrow">
-                <span className="dot" aria-hidden="true"></span>
-                <span>SDE I at Kuhoo Finance</span>
-                <span>Mumbai, Maharashtra</span>
-              </div>
-              <h1>Abhijit Bose Das<br /><span className="soft">builds Flutter apps for student loans.</span></h1>
-              <p className="lede">
-                Flutter developer with 2.5+ years in student-lending fintech. I've shipped three products across the loan
-                lifecycle, from onboarding and CKYC to sanction and post-disbursement, and <mark>cut manual effort by 70–90%</mark>{" "}
-                for credit, partner and servicing teams with RBI-compliant journeys.
-              </p>
-              <div className="cta">
-                <a className="btn primary" href="#work">See the work</a>
-                <a className="btn" href={GITHUB} target="_blank" rel="noreferrer">GitHub</a>
-                <a className="btn" href={LINKEDIN} target="_blank" rel="noreferrer">LinkedIn</a>
-              </div>
-            </div>
-            <img className="portrait" src={portrait} alt="Abhijit Bose Das" width="280" height="280" />
+      <main>
+        <header id="top" className="wrap hero">
+          <div className="meta">
+            <span>Statement of account</span>
+            <span>Holder: Abhijit Bose Das</span>
+            <span>Branch: Mumbai</span>
+            <span className="accent">● Open to Flutter roles</span>
           </div>
-          <div className="stats">
-            {STATS.map((s) => (
-              <div className="stat" key={s.label}><b>{s.value}</b><span>{s.label}</span></div>
-            ))}
+          <div className="hero-row">
+            <h1>Flutter engineer.<br />Student-loan fintech.<br /><span className="dim">2.5 years, compounding.</span></h1>
+            <img className="portrait" src={portrait} alt="Abhijit Bose Das" />
+          </div>
+          <p className="lede">
+            SDE I at Kuhoo Finance. Three products shipped across the loan lifecycle — onboarding, CKYC, sanction and
+            servicing — cutting manual effort by 70–90% for credit, partner and servicing teams.
+          </p>
+          <div className="cta">
+            <a className="btn primary" href="#entries">View the statement</a>
+            <a className="btn" href={GITHUB} target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a className="btn" href={LINKEDIN} target="_blank" rel="noreferrer">LinkedIn ↗</a>
           </div>
         </header>
 
-        <section id="lifecycle" className="wrap">
-          <div className="sec-head">
-            <h2>Across the loan lifecycle</h2>
-            <span className="sec-note">What I shipped at each stage of a student loan</span>
-          </div>
-          <div className="track">
-            {LIFECYCLE.map((s, i) => (
-              <div className="stage" key={s.stage}>
-                <div className="node">{i + 1}</div>
-                <h4>{s.stage}</h4>
-                <ul>
-                  {s.items.map(([bold, rest]) => (
-                    <li key={bold}><strong>{bold}</strong>{rest}</li>
-                  ))}
-                </ul>
+        <section className="balances" aria-label="Balance summary">
+          <div className="wrap balances-grid">
+            {BALANCES.map((b) => (
+              <div className="balance" key={b.label}>
+                <div className={b.accent ? "balance-value accent" : "balance-value"}>{b.value}</div>
+                <div className="balance-label">{b.label}</div>
               </div>
             ))}
           </div>
         </section>
 
-        <section id="work" className="wrap">
+        <section id="entries" className="wrap section">
           <div className="sec-head">
-            <h2>Experience</h2>
-            <span className="sec-note">Kuhoo Finance · Jan 2024 – present</span>
+            <h2>01 — Job</h2>
+            <span className="mono muted">Jan 2024 → present</span>
           </div>
 
-          <article className="role">
-            <div className="role-meta">
-              <div className="when">May 2024 – Present</div>
-              <h3>Software Development Engineer I</h3>
-              <div className="org">Kuhoo Finance, Mumbai</div>
-            </div>
-            <div className="role-body">
+          <div className="job">
+            <div className="employer">
+              <div className="label">EMPLOYER</div>
+              <h3>Kuhoo Finance</h3>
+              <p>Student-lending fintech (NBFC) · BKC, Mumbai</p>
               <p>
-                I own features across three products, from requirement analysis and low-level design through to release,
-                working with product, backend, design and credit teams in Agile sprints.
+                I own features across three products — the borrower app, the credit team's LOS and the partner portal —
+                from requirements and low-level design to release, in Agile sprints with product, backend, design and credit.
               </p>
-              <Chips items={SDE_STACK} />
-              {PRODUCTS.map((p) => <Product key={p.name} {...p} />)}
+              <div className="employer-links">
+                <a href="https://www.kuhoo.com/" target="_blank" rel="noreferrer">kuhoo.com ↗</a>
+                <a href="https://www.linkedin.com/company/kuhoo-edufintech/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+              </div>
             </div>
-          </article>
+            <ol className="roles">
+              {ROLES.map((r) => (
+                <li key={r.title}>
+                  <div className={r.current ? "role-when accent" : "role-when"}>{r.when}</div>
+                  <div className="role-body">
+                    <h3>{r.title}{r.note && <span className="role-note"> {r.note}</span>}</h3>
+                    <p>{r.text}</p>
+                    <p className="role-stack">{r.stack}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
 
-          <article className="role">
-            <div className="role-meta">
-              <div className="when">Jan 2024 – May 2024</div>
-              <h3>SDE Intern</h3>
-              <div className="org">Kuhoo Finance, Mumbai</div>
-            </div>
-            <div className="role-body">
-              <Chips items={INTERN_STACK} />
-              <Product name="Partner Onboarding Portal" platform="LOS sub-portal · Flutter" items={INTERN_ITEMS} />
-            </div>
-          </article>
+          <h3 className="kicker accent">ACROSS THE LOAN LIFECYCLE · 5 STAGES</h3>
+          <ol className="stages">
+            {STAGES.map((s, i) => (
+              <li className={i === 0 ? "stage first" : "stage"} key={s.name}>
+                <div className="stage-num">{String(i + 1).padStart(2, "0")}</div>
+                <h4>{s.name}</h4>
+                <p>{s.text}</p>
+              </li>
+            ))}
+          </ol>
+
+          <h3 className="kicker accent">WHAT I SHIPPED · LEDGER</h3>
+          <div className="table-scroll">
+            <table className="ledger">
+              <thead>
+                <tr>
+                  <th className="col-product">Product</th>
+                  <th>Entry</th>
+                  <th className="col-effect">Effect</th>
+                </tr>
+              </thead>
+              <tbody>
+                {LEDGER.map((row) => (
+                  <tr key={row.title}>
+                    <td className="cell-product">{row.product}</td>
+                    <td><strong>{row.title}</strong> {row.text}</td>
+                    <td className={row.accent ? "cell-effect accent" : "cell-effect"}>{row.effect}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </section>
 
-        <section id="skills" className="wrap">
-          <div className="sec-head"><h2>Technical skills</h2></div>
-          <div className="skills">
-            {SKILLS.map((s) => (
-              <div className={s.core ? "skill core" : "skill"} key={s.group}>
-                <h4>{s.group}</h4>
-                <Chips items={s.items} />
+        <section id="stack" className="wrap section">
+          <h2>02 — Stack</h2>
+          <div className="stack-grid">
+            {STACK.map((s) => (
+              <div className="stack-cell" key={s.group}>
+                <h3 className={s.core ? "label accent" : "label"}>{s.group.toUpperCase()}</h3>
+                <p>{s.items}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <section id="projects" className="wrap">
-          <div className="sec-head"><h2>Projects &amp; recognition</h2></div>
-          <div className="duo">
-            <article className="project">
-              <div className="product-head">
-                <h3>Khush-Hal</h3>
-                <span className="platform">2026 · Flutter · SQLite · Offline-first</span>
-              </div>
-              <p>An MSME health app and field-officer portal for rural small businesses, built with a 5-member team.</p>
-              <ul>
-                <li>Offline-first Flutter app with on-device SQLite and a sync engine, so it works where connectivity doesn't.</li>
-                <li>Localized in Hindi and English, with live-location maps, built with AI-assisted development.</li>
-                <li>Field-officer portal with 6 features: one-eye view, document parsing, alerts, review-based filters, AI-driven plans and forecasting.</li>
-              </ul>
-              <a href="https://github.com/RishabhSharma02/Khushhal-Frontend" target="_blank" rel="noreferrer">View on GitHub →</a>
+        <section id="side" className="wrap section">
+          <h2>03 — Side work</h2>
+          <div className="side">
+            <article className="side-project">
+              <div className="label">2026 · FLUTTER · SQLITE · OFFLINE-FIRST</div>
+              <h3>Khush-Hal</h3>
+              <p>
+                An MSME health app and field-officer portal for rural small businesses — offline-first with an on-device sync
+                engine, Hindi and English, live-location maps, and a 6-feature officer portal.
+              </p>
+              <a className="mono" href="https://github.com/RishabhSharma02/Khushhal-Frontend" target="_blank" rel="noreferrer">View on GitHub ↗</a>
             </article>
             <aside className="award">
-              <div className="when">NABARD Hackathon · GFF 2026</div>
-              <div className="rank">Top 10<small>finish</small></div>
-              <p>Placed in the top 10 at the NABARD Hackathon at Global Fintech Fest 2026 with a 5-member team.</p>
+              <div className="mono">NABARD HACKATHON · GFF 2026</div>
+              <div className="award-rank">Top 10</div>
+              <p>Finish at Global Fintech Fest 2026 with a 5-member team.</p>
             </aside>
           </div>
         </section>
 
-        <section id="education" className="wrap">
-          <div className="sec-head"><h2>Education</h2></div>
-          <div className="edu">
-            <div>
-              <h3>Vellore Institute of Technology, AP</h3>
-              <p>B.Tech, Computer Science and Engineering · 2020 – 2024</p>
-            </div>
-            <div className="gpa">8.72 <small>/ 10 GPA</small></div>
+        <section id="personal" className="wrap section">
+          <div className="sec-head">
+            <h2>04 — Off the clock</h2>
+            <span className="mono muted">Unaudited entries</span>
+          </div>
+
+          <h3 className="kicker accent">BUILT FOR FUN · BEFORE FLUTTER</h3>
+          <div className="table-scroll">
+            <table className="ledger fun">
+              <thead>
+                <tr>
+                  <th className="col-project">Project</th>
+                  <th>What it is</th>
+                  <th className="col-links">Links</th>
+                </tr>
+              </thead>
+              <tbody>
+                {FUN_PROJECTS.map((p) => (
+                  <tr key={p.name}>
+                    <td className="cell-name">{p.name}</td>
+                    <td className="cell-dim">{p.text}</td>
+                    <td className="cell-links">
+                      {p.live && <><a href={p.live} target="_blank" rel="noreferrer">Live</a> · </>}
+                      <a href={p.code} target="_blank" rel="noreferrer">Code</a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <a className="more mono" href={GITHUB} target="_blank" rel="noreferrer">More on GitHub ↗</a>
+
+          <h3 className="kicker muted spaced">HOBBIES</h3>
+          <ul className="hobbies">
+            {HOBBIES.map((h) => <li key={h}>{h}</li>)}
+          </ul>
+
+          <h3 className="kicker muted spaced">OPENING BALANCE · SCHOOL</h3>
+          <div className="schools">
+            {SCHOOLS.map((s) => (
+              <div className="school" key={s.name}>
+                <span><strong>{s.name}</strong> <span className="muted">· {s.detail}</span></span>
+                <span className="mono">{s.score}</span>
+              </div>
+            ))}
           </div>
         </section>
 
         <section id="contact" className="wrap contact">
-          <h2>Building something in Flutter? Let's talk.</h2>
-          <div className="contact-grid">
-            <div className="cline">
-              <span className="k">Email</span>
-              <a className="v" href={`mailto:${EMAIL}`}>{EMAIL}</a>
-              <CopyEmail />
-            </div>
-            <div className="cline"><span className="k">LinkedIn</span><a className="v" href={LINKEDIN} target="_blank" rel="noreferrer">in/abhijitbosedas</a></div>
-            <div className="cline"><span className="k">GitHub</span><a className="v" href={GITHUB} target="_blank" rel="noreferrer">github.com/Abhiiiiijit</a></div>
+          <h2>Building in Flutter?<br /><span className="dim">Let's reconcile.</span></h2>
+          <div className="contact-lines">
+            <div className="cline"><span className="k">EMAIL</span><a href={`mailto:${EMAIL}`}>{EMAIL}</a></div>
+            <div className="cline"><span className="k">LINKEDIN</span><a href={LINKEDIN} target="_blank" rel="noreferrer">in/abhijitbosedas</a></div>
+            <div className="cline"><span className="k">GITHUB</span><a href={GITHUB} target="_blank" rel="noreferrer">github.com/Abhiiiiijit</a></div>
           </div>
+          <footer className="footer">
+            <span>© {new Date().getFullYear()} Abhijit Bose Das</span>
+            <span>Closing balance: still compounding</span>
+          </footer>
         </section>
       </main>
-
-      <footer>
-        <div className="wrap">
-          <span>© {new Date().getFullYear()} Abhijit Bose Das</span>
-          <span>Flutter · Android · iOS · Web</span>
-        </div>
-      </footer>
-    </>
+    </div>
   );
 }
 
