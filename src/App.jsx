@@ -3,7 +3,10 @@ import portrait from "./assets/portrait.jpg";
 
 const EMAIL = "abhijeetbosedas8@gmail.com";
 const GITHUB = "https://github.com/Abhiiiiijit";
-const LINKEDIN = "https://linkedin.com/in/abhijitbosedas";
+const LINKEDIN = "https://www.linkedin.com/in/abhijit-bose-das-5b6b1719b/";
+const PHONE = "+917506426396";
+const PHONE_LABEL = "+91 75064 26396";
+const WHATSAPP = "https://wa.me/917506426396";
 
 const BALANCES = [
   { value: "150K+", label: "Student App downloads", accent: true },
@@ -79,7 +82,7 @@ function App() {
     <div className="page">
       <nav className="nav" aria-label="Primary">
         <div className="wrap nav-inner">
-          <a className="brand" href="#top">ABD/<span>ledger</span></a>
+          <a className="brand" href="#top">Abhijit Bose Das</a>
           <div className="nav-links">
             <a href="#entries">01 Job</a>
             <a href="#stack">02 Stack</a>
@@ -257,9 +260,7 @@ function App() {
           <a className="more mono" href={GITHUB} target="_blank" rel="noreferrer">More on GitHub ↗</a>
 
           <h3 className="kicker muted spaced">HOBBIES</h3>
-          <ul className="hobbies">
-            {HOBBIES.map((h) => <li key={h}>{h}</li>)}
-          </ul>
+          <p className="hobbies">{HOBBIES.join(" · ")}</p>
 
           <h3 className="kicker muted spaced">OPENING BALANCE · SCHOOL</h3>
           <div className="schools">
@@ -273,10 +274,15 @@ function App() {
         </section>
 
         <section id="contact" className="wrap contact">
-          <h2>Building in Flutter?<br /><span className="dim">Let's reconcile.</span></h2>
+          <h2>Have something to build?<br /><span className="dim">Let's reconcile.</span></h2>
           <div className="contact-lines">
             <div className="cline"><span className="k">EMAIL</span><a href={`mailto:${EMAIL}`}>{EMAIL}</a></div>
-            <div className="cline"><span className="k">LINKEDIN</span><a href={LINKEDIN} target="_blank" rel="noreferrer">in/abhijitbosedas</a></div>
+            <div className="cline"><span className="k">LINKEDIN</span><a href={LINKEDIN} target="_blank" rel="noreferrer">in/abhijit-bose-das</a></div>
+            <div className="cline">
+              <span className="k">PHONE</span>
+              <a href={`tel:${PHONE}`}>{PHONE_LABEL}</a>
+              <a href={WHATSAPP} target="_blank" rel="noreferrer">WhatsApp ↗</a>
+            </div>
             <div className="cline"><span className="k">GITHUB</span><a href={GITHUB} target="_blank" rel="noreferrer">github.com/Abhiiiiijit</a></div>
           </div>
           <footer className="footer">

@@ -14,7 +14,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 104px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
@@ -36,14 +36,13 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .accent { color: var(--accent); }
 
 /* Nav */
-.nav { border-bottom: 1px solid var(--line); }
+.nav { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); }
 .nav-inner {
   padding-top: 18px; padding-bottom: 18px;
   display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center;
   font-family: var(--mono); font-size: 13px;
 }
-.brand { text-decoration: none; font-weight: 700; letter-spacing: 0.02em; }
-.brand span { color: var(--accent); }
+.brand { text-decoration: none; font-family: var(--sans); font-size: 16px; font-weight: 600; letter-spacing: -0.01em; }
 .nav-links { display: flex; flex-wrap: wrap; gap: 24px; }
 .nav-links a { text-decoration: none; color: var(--muted); }
 .nav-links a:hover { color: var(--accent); }
@@ -167,11 +166,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .award p { margin: 12px 0 0; }
 
 /* Off the clock */
-.hobbies {
-  list-style: none; margin: 16px 0 0; padding: 0;
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;
-}
-.hobbies li { padding: 20px; border: 1px solid var(--line); font-weight: 600; font-size: 17px; }
+.hobbies { margin: 16px 0 0; font-size: 22px; font-weight: 600; letter-spacing: -0.01em; }
 .schools { margin-top: 16px; border-top: 1px solid var(--line); font-size: 15px; }
 .school {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px;
@@ -190,6 +185,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 }
 
 @media (max-width: 560px) {
+  .nav-links { flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; max-width: 100%; scrollbar-width: none; }
   .balance { padding-left: 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .balance:last-child { border-bottom: 0; }
 }
