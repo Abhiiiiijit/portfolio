@@ -18,3 +18,7 @@ npm run build    # production build in ./build
 ## Editing content
 
 All text lives in `src/App.jsx` as plain arrays at the top of the file (`BALANCES`, `ROLES`, `STAGES`, `LEDGER`, `STACK`, `FUN_PROJECTS`, `HOBBIES`, `SCHOOLS`). Styles are in `src/App.css`, with the colour and font tokens at the top. The profile photo is `src/assets/portrait.jpg` (shown in grayscale by CSS).
+
+## Updating the resume
+
+The resume is served from `public/resume.pdf` and linked from the nav, the hero and the contact section. To update it, replace that file with the new PDF under the same name (on GitHub: open `public`, then Add file → Upload files) and commit; Vercel redeploys automatically.

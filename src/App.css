@@ -46,6 +46,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .nav-links { display: flex; flex-wrap: wrap; gap: 24px; }
 .nav-links a { text-decoration: none; color: var(--muted); }
 .nav-links a:hover { color: var(--accent); }
+.nav-links .nav-resume { color: var(--accent); }
 
 /* Hero */
 .hero { padding-top: 88px; padding-bottom: 56px; }

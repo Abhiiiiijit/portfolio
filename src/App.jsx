@@ -3,6 +3,7 @@ import portrait from "./assets/portrait.jpg";
 
 const EMAIL = "abhijeetbosedas8@gmail.com";
 const GITHUB = "https://github.com/Abhiiiiijit";
+const RESUME = "/resume.pdf";
 const LINKEDIN = "https://www.linkedin.com/in/abhijit-bose-das-5b6b1719b/";
 const PHONE = "+917506426396";
 const PHONE_LABEL = "+91 75064 26396";
@@ -89,6 +90,7 @@ function App() {
             <a href="#side">03 Side work</a>
             <a href="#personal">04 Off the clock</a>
             <a href="#contact">05 Contact</a>
+            <a className="nav-resume" href={RESUME} target="_blank" rel="noreferrer">Resume ↗</a>
           </div>
         </div>
       </nav>
@@ -111,6 +113,7 @@ function App() {
           </p>
           <div className="cta">
             <a className="btn primary" href="#entries">View the statement</a>
+            <a className="btn" href={RESUME} target="_blank" rel="noreferrer">Resume ↗</a>
             <a className="btn" href={GITHUB} target="_blank" rel="noreferrer">GitHub ↗</a>
             <a className="btn" href={LINKEDIN} target="_blank" rel="noreferrer">LinkedIn ↗</a>
           </div>
@@ -280,6 +283,7 @@ function App() {
             <div className="cline"><span className="k">LINKEDIN</span><a href={LINKEDIN} target="_blank" rel="noreferrer">in/abhijit-bose-das</a></div>
             <div className="cline"><span className="k">PHONE</span><a href={`tel:${PHONE}`}>{PHONE_LABEL}</a></div>
             <div className="cline"><span className="k">WHATSAPP</span><a href={WHATSAPP} target="_blank" rel="noreferrer">Message on WhatsApp ↗</a></div>
+            <div className="cline"><span className="k">RESUME</span><a href={RESUME} target="_blank" rel="noreferrer">View PDF ↗</a><a href={RESUME} download="Abhijit_Bose_Das_Resume.pdf">Download</a></div>
             <div className="cline"><span className="k">GITHUB</span><a href={GITHUB} target="_blank" rel="noreferrer">github.com/Abhiiiiijit</a></div>
           </div>
           <footer className="footer">
