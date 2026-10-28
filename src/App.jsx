@@ -227,7 +227,10 @@ function App() {
                 refuses to publish a rule without its quote. 16 states and about 65 hand-verified schemes so far.
               </p>
               <p className="role-stack">Next.js · React · TypeScript · Tailwind · Postgres (Neon) · Drizzle · Zod · Auth.js · Vitest · Playwright · Vercel</p>
-              <a className="mono" href="https://scholarship-finder-umber-phi.vercel.app" target="_blank" rel="noreferrer">Try the prototype ↗</a>
+              <div className="side-links mono">
+                <a href="https://scholarship-finder-umber-phi.vercel.app" target="_blank" rel="noreferrer">Try the prototype ↗</a>
+                <a href="https://github.com/Abhiiiiijit/scholarship-finder" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+              </div>
             </article>
             <article className="side-project">
               <div className="label">2026 · FLUTTER · SQLITE · OFFLINE-FIRST</div>
