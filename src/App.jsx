@@ -109,7 +109,8 @@ function App() {
           </div>
           <p className="lede">
             SDE I at Kuhoo Finance. Three products shipped across the loan lifecycle — onboarding, CKYC, sanction and
-            servicing — cutting manual effort by 70–90% for credit, partner and servicing teams.
+            servicing — cutting manual effort by 70–90% for credit, partner and servicing teams. On the side I'm building{" "}
+            <a href="#side">Paatra</a>, a scholarship finder for Indian engineering students (prototype).
           </p>
           <div className="cta">
             <a className="btn primary" href="#entries">View the statement</a>
@@ -213,6 +214,21 @@ function App() {
         <section id="side" className="wrap section">
           <h2>03 — Side work</h2>
           <div className="side">
+            <article className="side-project wide">
+              <div className="side-top">
+                <div className="label">2026 · NEXT.JS · TYPESCRIPT · POSTGRES</div>
+                <span className="status">● Prototype · in progress</span>
+              </div>
+              <h3>Paatra</h3>
+              <p>
+                Tells an Indian B.E./B.Tech student which scholarships they qualify for — central, AICTE, state and private —
+                and quotes the official rule, word for word with a link, behind every answer. Matching runs in the browser,
+                so a student's answers never leave their phone. English and Hindi, phone-first, with an admin editor that
+                refuses to publish a rule without its quote. 16 states and about 65 hand-verified schemes so far.
+              </p>
+              <p className="role-stack">Next.js · React · TypeScript · Tailwind · Postgres (Neon) · Drizzle · Zod · Auth.js · Vitest · Playwright · Vercel</p>
+              <a className="mono" href="https://scholarship-finder-umber-phi.vercel.app" target="_blank" rel="noreferrer">Try the prototype ↗</a>
+            </article>
             <article className="side-project">
               <div className="label">2026 · FLUTTER · SQLITE · OFFLINE-FIRST</div>
               <h3>Khush-Hal</h3>
