@@ -1,5 +1,6 @@
 import "./App.css";
 import portrait from "./assets/portrait.jpg";
+import VisitorCount from "./VisitorCount";
 
 const EMAIL = "abhijeetbosedas8@gmail.com";
 const GITHUB = "https://github.com/Abhiiiiijit";
@@ -307,6 +308,7 @@ function App() {
           </div>
           <footer className="footer">
             <span>© {new Date().getFullYear()} Abhijit Bose Das</span>
+            <VisitorCount />
             <span>Closing balance: still compounding</span>
           </footer>
         </section>
